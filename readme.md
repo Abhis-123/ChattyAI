@@ -1,6 +1,9 @@
 # AI Junior Developer (Intern) Test 
 Welcome! and thank you for applying! 
 
+# Rurring the app 
+first install the requirements and then run the app by `python app.py`
+
 ## Requirement
 The current project has the blueprint structure of an AI App. 
 
