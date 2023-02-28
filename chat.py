@@ -1,7 +1,9 @@
+from transformers.utils import logging
+logging.set_verbosity_error()
+
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-from transformers.utils import logging
-logging.set_verbosity_info()
 
 class ChatBot:
     def __init__(self,name ="cookie", model_name = "microsoft/DialoGPT-small"):
@@ -30,16 +32,13 @@ class ChatBot:
         return output
 
 
-
-
-from chat import ChatBot
 if __name__ == '__main__':
     chatbot = ChatBot(model_name = "microsoft/DialoGPT-large")
     current_text = ""
     while True:
         current_text = input(">>You: ")
         if current_text == "exit" or current_text=="bye":
-            print("Bot: I love You")
+            print(">>Bot: I love You")
             break
         out_text = chatbot.process(current_text)
         print(">>Bot: "+ out_text)
